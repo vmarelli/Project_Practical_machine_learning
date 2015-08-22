@@ -1,0 +1,554 @@
+rm(list = ls())
+
+install.packages("caret")
+install.packages("verification")
+
+library('caret')
+library('grDevices')
+
+library('lattice')
+library('ggplot2')
+library('e1071')
+library('randomForest')
+library("ROCR")
+
+require(verification)
+getwd()
+
+
+#first get the data
+
+file<-paste('pml-training.csv')
+
+setwd("~/Coursera/MAchine learning/Project/Descriptive")
+getwd()
+#don't forget to remove text into num!!! 
+df_dat<-read.table(file, header=TRUE, sep=',',dec='.', na.strings=c("NA", "-", "?"))
+
+attach(df_dat)
+names(df_dat)
+
+n=names(df_dat)
+dimen<-dim(df_dat)[1]
+
+
+#first remove variables with too many missing values (>50%)
+
+missingval_name<-c(0)
+
+for(i in n){
+  
+  
+  su_na<-sum(is.na(df_dat[,names(df_dat)==i]))
+  
+  su_blank<-sum(df_dat[,names(df_dat)==i]=="")
+  
+  if((su_na>0.5*dimen)|(su_blank>0.5*dimen)){missingval_name<-c(missingval_name,i)}
+  
+  
+}
+
+
+
+valuablename=n %in% missingval_name
+
+df_data<-df_dat[! valuablename]
+
+
+#60 variables remaining!
+detach(df_dat)
+
+
+attach(df_data)
+
+n=names(df_data)
+
+#then we do some basic plot of the classe versus the other variables
+
+for(j in n){
+ 
+  plot(df_data[,names(df_data)==j],df_data$classe,xlab=j)
+  
+  plotname=paste0("Plot",j,'.png')
+  
+  dev.copy(png,plotname,height=400,width=800)
+  dev.off()
+  
+}
+
+#first conclusion from the plotting: there are some outliers that should be removed! 
+
+#outlier gyros_dumbbell_x ==-200,  gyros_dumbbell_y ==52 gyros_dumbbell_z==350
+
+df_data<-df_data[df_data$gyros_dumbbell_x>-3,]
+
+
+df_data<-df_data[df_data$gyros_dumbbell_y<5,]
+
+
+# plot further boxplots of the variables!
+
+for(j in n){
+  
+  
+  ggplot(data=df_data, aes_string(y=j,x='classe')) + geom_boxplot()
+  
+  
+  plotname=paste0("Plot_boxplot",j,'.png')
+  
+  ggsave(file=plotname)
+ 
+}
+
+
+# most of the variables are continuous but the following ones: cvtd_timestamp
+
+
+ggplot(data=df_data, aes_string(x='cvtd_timestamp',group='classe',fill='classe')) + geom_histogram()
+
+plotname=paste0("Plot_histcvtd_timestamp.png")
+ggsave(file=plotname)
+
+
+ggplot(data=df_data, aes_string(x='new_window',group='classe',fill='classe')) + geom_histogram()
+
+plotname=paste0("Plot_new_window.png")
+ggsave(file=plotname)
+
+
+ggplot(data=df_data, aes_string(x='user_name',group='classe',fill='classe')) + geom_histogram()
+
+plotname=paste0("Plot_user_name.png")
+ggsave(file=plotname)
+
+
+
+detach(df_data)
+
+
+
+
+# Now we want to do some heatmap analysis
+
+samp<-sample(dimen, 1000, replace=FALSE)
+
+#remove the non numeric variables
+dataMatrixOrdered=df_data[samp,-c(1,3,4)]
+
+dataMatrixOrdered<-data.matrix(dataMatrixOrdered)
+
+hh <- hclust(dist(dataMatrixOrdered))
+
+dataMatrixOrdered <- dataMatrixOrdered[hh$order, ]
+
+heatmap(dataMatrixOrdered)
+par(mfrow = c(1, 3))
+image(t(dataMatrixOrdered)[, nrow(dataMatrixOrdered):1])
+plot(rowMeans(dataMatrixOrdered),  xlab = "Row Mean", ylab = "Row", pch = 19)
+plot(colMeans(dataMatrixOrdered), xlab = "Column", ylab = "Column Mean", pch = 19)
+
+
+dev.copy(png,'heatmap.png',height=400,width=800)
+dev.off()
+
+# some PCA
+
+svd1 <- svd(scale(dataMatrixOrdered))
+par(mfrow = c(1, 3))
+image(t(dataMatrixOrdered)[, nrow(dataMatrixOrdered):1])
+plot(svd1$u[, 1], xlab = "Row", ylab = "First left singular vector",
+     pch = 19)
+plot(svd1$v[, 1], xlab = "Column", ylab = "First right singular vector", pch = 19)
+dev.copy(png,'PCA_vectors.png',height=400,width=800)
+dev.off()
+
+
+# there seems to be clusters from this analysis! 
+
+
+par(mfrow = c(1, 2))
+plot(svd1$d, xlab = "Column", ylab = "Singular value", pch = 19)
+plot(svd1$d^2/sum(svd1$d^2), xlab = "Column", ylab = "Prop. of variance explained",
+     pch = 19)
+
+
+par(mfrow = c(1,1))
+
+dataMatrixOrdered2<-data.matrix(df_data[,-c(1,3,4,60)])
+
+
+prComp<-prcomp(dataMatrixOrdered2)
+
+plot(prComp$x[,1],prComp$x[,2],col=df_data$classe)
+#------------------------------------------------------------------------------
+#a little kmeans clustering
+
+
+kmeansObj <- kmeans(dataMatrixOrdered2, centers = 7)
+names(kmeansObj)
+kmeansObj$cluster
+df_data$cluster<-kmeansObj$cluster
+
+
+ggplot(data=df_data, aes(x=cluster,group=classe,fill=classe)) + geom_histogram()
+
+plotname=paste0("Plot_kmeancluster.png")
+ggsave(file=plotname)
+
+
+#clustering does not seem obvious
+
+
+distxy <- dist(dataMatrixOrdered2)
+hClustering <- hclust(distxy)
+plot(hClustering)
+
+dev.copy(png,'dendrogram.png',height=400,width=800)
+dev.off()
+
+
+names(hClustering)
+hClustering$order
+
+
+df_data$hcluster<-hClustering$order
+
+ggplot(data=df_data, aes(y=hcluster,x=classe)) + geom_point()
+
+
+plotname=paste0("Plot_hierarchicalcluster.png")
+ggsave(file=plotname)
+
+
+write.csv(df_data,'clean_data.csv')
+
+#------------------------------------------------------------
+
+# now enough descriptive analysis, we go for modeling.
+
+#remove the variables that have been added
+
+df_data_train<-df_data[,2:60]
+
+
+dim_df_data_train<-dim(df_data_train)[2]
+
+#be sure that the target variable is a factor
+df_data_train[,dim_df_data_train]=as.factor(df_data_train[,dim_df_data_train])
+
+#create formula for passing into the algorithm
+
+var_names<-paste(names(df_data_train[,1:dim_df_data_train-1]),collapse="+")
+t<-names(df_data_train)
+t2<-t[dim_df_data_train]
+form<-paste0(t2,"~",var_names,collapse="+")
+
+#separate your dataset in training and vlidation, the cross validation will be performed on the training set
+
+train<-createDataPartition(y=df_data_train$classe,p=0.80,list=FALSE)
+
+df_train<-df_data_train[train,]
+
+df_validation<-df_data_train[-train,]
+
+#we will have 10 different folds
+
+folds<-createFolds(y=df_train$classe,k=10,list=FALSE,returnTrain=FALSE)
+
+df_train_fold<-df_train
+
+df_train_fold$fold<-folds
+
+#----------------------------------------------------------------------
+#first model random forest
+
+#paralemeters for Mtry and nodesize
+MTRY=10
+NODESIZE=20
+
+set.seed(1989)
+
+temp = randomForest(as.formula(form),data= df_train ,maxDepth = 32,nodesize=NODESIZE,ntree=200,cp=0, seed=1989, mtry=MTRY,importance=TRUE,localImp=TRUE)
+
+#now let's check the validation set
+
+pred_Test<-predict(temp,newdata=df_validation)
+
+tab<-table( pred_Test,df_validation$classe)
+
+conf<-confusionMatrix(tab)
+
+overal_matrix<-conf$overall
+
+overal_matrix[1] #0.9979602
+
+#the results are really good! Let's check the cross validation to see if the model is not overfitting!
+
+#let's check the cross validation
+err.vect=rep(NA,10)
+for (i in 1:10){
+  
+  train_folds=df_train[df_train_fold$fold!=i,] #train the model using these data
+  test_folds=df_train[df_train_fold$fold==i,] #test themodel using these data
+  
+  cross_val = randomForest(as.formula(form),data= train_folds ,maxDepth = 32,nodesize=NODESIZE,ntree=200,cp=0, seed=1989, mtry=MTRY)
+  
+  #make the prediction on the test set
+  prediction_cross_val=predict(cross_val,newdata=test_folds[,-dim_df_data_train])
+
+  #calculate models accuracy for the ith fold
+  
+  tab<-table(prediction_cross_val,test_folds$classe)
+  
+  conf<-confusionMatrix(tab)
+  
+  overal_matrix<-conf$overall
+  
+  
+  err.vect[i]=overal_matrix[1]
+  print(paste("Accuracy for fold", i,":", err.vect[i]))
+  
+  
+  #[1] "Accuracy for fold 1 : 0.996819338422392"
+  #[1] "Accuracy for fold 2 : 0.998087954110899"
+  #[1] "Accuracy for fold 3 : 1"
+  #[1] "Accuracy for fold 4 : 0.997450605481198"
+  #[1] "Accuracy for fold 5 : 0.997452229299363"
+  #[1] "Accuracy for fold 6 : 0.998725302740599"
+  #[1] "Accuracy for fold 7 : 0.997448979591837"
+  #[1] "Accuracy for fold 8 : 0.998089171974522"
+  #[1] "Accuracy for fold 9 : 0.997453851050286"
+  #[1] "Accuracy for fold 10 : 0.999363462762572"
+  
+}
+print(paste("Average accuracy on the 10 folds cross validation:",mean(err.vect))) # 0.998089089543367
+
+#after checking the var imp, we see that the variables 'new_window' and 'raw_timestamp_part_2' are not really useful and can be removed from the predictors
+
+#the predictions prefer a small nodesize
+
+df_train<-subset(df_train,select=-c(new_window,raw_timestamp_part_2))
+
+df_validation<-subset(df_validation,select=-c(new_window,raw_timestamp_part_2))
+
+# let's calculate again the prediction
+
+dim_df_train<-dim(df_train)[2]
+
+var_names<-paste(names(df_train[,1:dim_df_train-1]),collapse="+")
+t<-names(df_train)
+t2<-t[dim_df_train]
+form<-paste0(t2,"~",var_names,collapse="+")
+
+set.seed(1989)
+
+temp = randomForest(as.formula(form),data= df_train ,maxDepth = 32,nodesize=k,ntree=200,cp=0, seed=1989, mtry=i,importance=TRUE,localImp=TRUE)
+
+#now let's check the validation set
+
+pred_Test<-predict(temp,newdata=df_validation)
+
+tab<-table( pred_Test,df_validation$classe)
+
+conf<-confusionMatrix(tab)
+
+overal_matrix<-conf$overall
+
+overal_matrix[1] #0.9977053
+#the results are still really good
+#let's check the cross validation
+err.vect=rep(NA,10)
+for (i in 1:10){
+  
+  train_folds=df_train[df_train_fold$fold!=i,] #train the model using these data
+  test_folds=df_train[df_train_fold$fold==i,] #test themodel using these data
+  
+  cross_val = randomForest(as.formula(form),data= train_folds ,maxDepth = 32,nodesize=NODESIZE,ntree=200,cp=0, seed=1989, mtry=MTRY)
+  
+  #make the prediction on the test set
+  prediction_cross_val=predict(cross_val,newdata=test_folds[,-dim_df_data_train])
+  
+  #calculate models accuracy for the ith fold
+  
+  tab<-table(prediction_cross_val,test_folds$classe)
+  
+  conf<-confusionMatrix(tab)
+  
+  overal_matrix<-conf$overall
+  
+  
+  err.vect[i]=overal_matrix[1]
+  print(paste("Accuracy for fold", i,":", err.vect[i]))
+  
+  
+  #Accuracy for fold 1 : 0.998091603053435"
+  #[1] "Accuracy for fold 2 : 0.996813256851498"
+  #[1] "Accuracy for fold 3 : 1"
+  #[1] "Accuracy for fold 4 : 0.998087954110899"
+  #[1] "Accuracy for fold 5 : 0.996815286624204"
+  #[1] "Accuracy for fold 6 : 0.9993626513703"
+  #[1] "Accuracy for fold 7 : 0.998086734693878"
+  #[1] "Accuracy for fold 8 : 0.997452229299363"
+  #[1] "Accuracy for fold 9 : 0.998090388287715"
+  #[1] "Accuracy for fold 10 : 0.999363462762572"
+  
+  
+}
+print(paste("Average accuracy on the 10 folds cross validation:",mean(err.vect))) #0.998216356705386 
+
+#removing those two variables didn't hurt the prediction
+
+#let us check if we can further reduce the dimensionality of the predictors and use PCA
+
+# check the variables that are highly correlated
+
+df_train_num<-subset(df_train,select=-c(user_name,cvtd_timestamp,classe))
+
+df_validation_num<-subset(df_validation,select=-c(user_name,cvtd_timestamp,classe))
+
+M<-abs(cor(df_train_num))
+
+diag(M)<-0
+
+which(M>0.8,arr.ind=T)
+#there seems to be a lot of variables correlated so we can use PCA to reduce the dimensionality 
+
+prComp<-prcomp(log10(df_train_num))
+
+summary(prComp)
+#the whole variability can be reduced to 3 components! 
+
+df_PCA<-predict(prComp,df_train_num)
+df_PCA_validation<-predict(prComp,df_validation_num)
+
+df_PCA<-df_PCA[,c(1,2,3)]
+df_PCA_validation<-df_PCA_validation[,c(1,2,3)]
+
+df_train_PCA<-cbind(df_PCA,df_train[,c('user_name','cvtd_timestamp','classe')])
+df_validation_PCA<-cbind(df_PCA_validation,df_validation[,c('user_name','cvtd_timestamp','classe')])
+
+#now let's use our algorithm again
+
+dim_df_train<-dim(df_train_PCA)[2]
+
+var_names<-paste(names(df_train_PCA[,1:dim_df_train-1]),collapse="+")
+t<-names(df_train_PCA)
+t2<-t[dim_df_train]
+form<-paste0(t2,"~",var_names,collapse="+")
+
+set.seed(1989)
+
+temp = randomForest(as.formula(form),data= df_train_PCA ,maxDepth = 32,nodesize=k,ntree=200,cp=0, seed=1989, mtry=2,importance=TRUE,localImp=TRUE)
+
+#now let's check the validation set
+
+pred_Test<-predict(temp,newdata=df_validation_PCA)
+
+tab<-table( pred_Test,df_validation$classe)
+
+conf<-confusionMatrix(tab)
+
+overal_matrix<-conf$overall
+
+overal_matrix[1] #0.9974503
+
+#let's check the cross validation
+err.vect=rep(NA,10)
+for (i in 1:10){
+  
+  train_folds=df_train[df_train_fold$fold!=i,] #train the model using these data
+  
+  test_folds=df_train[df_train_fold$fold==i,] #test themodel using these data
+  
+  
+  df_train_folds_num<-subset(train_folds,select=-c(user_name,cvtd_timestamp,classe))
+  
+  df_validation_folds_num<-subset(test_folds,select=-c(user_name,cvtd_timestamp,classe))
+  
+  
+  df_PCA_folds<-predict(prComp,df_train_folds_num)
+  df_PCA_validation_folds<-predict(prComp,df_validation_folds_num)
+  
+  df_PCA_folds<-df_PCA_folds[,c(1,2,3)]
+  df_PCA_validation_folds<-df_PCA_validation_folds[,c(1,2,3)]
+  
+  train_folds<-cbind(df_PCA_folds,train_folds[,c('user_name','cvtd_timestamp','classe')])
+  test_folds<-cbind(df_PCA_validation_folds,test_folds[,c('user_name','cvtd_timestamp','classe')])
+  
+    
+  cross_val = randomForest(as.formula(form),data= train_folds ,maxDepth = 32,nodesize=NODESIZE,ntree=200,cp=0, seed=1989, mtry=MTRY)
+  
+  #make the prediction on the test set
+  prediction_cross_val=predict(cross_val,newdata=test_folds[,-dim_df_data_train])
+  
+  #calculate models accuracy for the ith fold
+  
+  tab<-table(prediction_cross_val,test_folds$classe)
+  
+  conf<-confusionMatrix(tab)
+  
+  overal_matrix<-conf$overall
+  
+  
+  err.vect[i]=overal_matrix[1]
+  print(paste("Accuracy for fold", i,":", err.vect[i]))
+  #[1] "Accuracy for fold 1 : 0.993638676844784"
+#[1] "Accuracy for fold 2 : 0.996175908221797"
+#[1] "Accuracy for fold 3 : 0.992993630573248"
+#[1] "Accuracy for fold 4 : 0.996813256851498"
+#[1] "Accuracy for fold 5 : 0.99171974522293"
+#[1] "Accuracy for fold 6 : 0.996813256851498"
+#[1] "Accuracy for fold 7 : 0.993622448979592"
+#[1] "Accuracy for fold 8 : 0.991082802547771"
+#[1] "Accuracy for fold 9 : 0.994907702100573"
+#[1] "Accuracy for fold 10 : 0.991088478676003"
+  
+  
+}
+print(paste("Average accuracy on the 10 folds cross validation:",mean(err.vect))) #0.993885590686969
+
+
+#this approach is also really good but 
+
+
+#try another method with the initial dataset
+#SVM
+
+dim_df_train<-dim(df_train)[2]
+
+var_names<-paste(names(df_train[,1:dim_df_train-1]),collapse="+")
+t<-names(df_train)
+t2<-t[dim_df_train]
+form<-paste0(t2,"~",var_names,collapse="+")
+
+set.seed(1989)
+
+
+model <- svm(as.formula(form),data=df_train,scale=T, type="C-classification", cross=5,gamma=0.001,cost=10,probability = TRUE)#, 
+model
+
+pred_valid <- predict(model,newdata = df_validation[,-dim_df_train])
+
+tab<-table( pred_valid,df_validation$classe)
+
+conf<-confusionMatrix(tab)
+
+overal_matrix<-conf$overall
+
+overal_matrix[1] #0.9974503
+
+#SVM is a bit less good
+
+#now lets predict the value for the test set
+
+
+
+#don't forget to remove text into num!!! 
+import_data_Test<-read.table('pml-testing.csv', header=TRUE, sep=',',dec='.', na.strings=c("NA", "-", "?"))
+
+
+#Keep same variables in Test Set
+
+df_data_test<-import_data_Test[names(df_train[,c(1:(dim(dim_df_train)[2]))])]
+
+
