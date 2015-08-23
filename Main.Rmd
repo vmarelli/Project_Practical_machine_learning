@@ -22,7 +22,7 @@ file<-paste('pml-training.csv')
 
 setwd("~/Coursera/MAchine learning/Project/Descriptive")
 getwd()
-#don't forget to remove text into num!!! 
+
 df_dat<-read.table(file, header=TRUE, sep=',',dec='.', na.strings=c("NA", "-", "?"))
 
 attach(df_dat)
