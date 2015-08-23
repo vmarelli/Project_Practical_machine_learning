@@ -1,2304 +1,1285 @@
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:w="urn:schemas-microsoft-com:office:word"
-xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
-xmlns="http://www.w3.org/TR/REC-html40">
+<html>
 
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=ProgId content=Word.Document>
-<meta name=Generator content="Microsoft Word 14">
-<meta name=Originator content="Microsoft Word 14">
-<link rel=File-List
-href="Project%20Practical%20Machine%20Learning_fichiers/filelist.xml">
-<link rel=Edit-Time-Data
-href="Project%20Practical%20Machine%20Learning_fichiers/editdata.mso">
-<!--[if !mso]>
-<style>
-v\:* {behavior:url(#default#VML);}
-o\:* {behavior:url(#default#VML);}
-w\:* {behavior:url(#default#VML);}
-.shape {behavior:url(#default#VML);}
-</style>
-<![endif]--><!--[if gte mso 9]><xml>
- <o:DocumentProperties>
-  <o:Author>Vivi</o:Author>
-  <o:Template>Normal</o:Template>
-  <o:LastAuthor>Vivi</o:LastAuthor>
-  <o:Revision>2</o:Revision>
-  <o:TotalTime>43</o:TotalTime>
-  <o:Created>2015-08-23T11:42:00Z</o:Created>
-  <o:LastSaved>2015-08-23T11:42:00Z</o:LastSaved>
-  <o:Pages>6</o:Pages>
-  <o:Words>1230</o:Words>
-  <o:Characters>6765</o:Characters>
-  <o:Company>Hewlett-Packard</o:Company>
-  <o:Lines>56</o:Lines>
-  <o:Paragraphs>15</o:Paragraphs>
-  <o:CharactersWithSpaces>7980</o:CharactersWithSpaces>
-  <o:Version>14.00</o:Version>
- </o:DocumentProperties>
- <o:OfficeDocumentSettings>
-  <o:AllowPNG/>
- </o:OfficeDocumentSettings>
-</xml><![endif]-->
-<link rel=themeData
-href="Project%20Practical%20Machine%20Learning_fichiers/themedata.thmx">
-<link rel=colorSchemeMapping
-href="Project%20Practical%20Machine%20Learning_fichiers/colorschememapping.xml">
-<!--[if gte mso 9]><xml>
- <w:WordDocument>
-  <w:TrackMoves>false</w:TrackMoves>
-  <w:TrackFormatting/>
-  <w:HyphenationZone>21</w:HyphenationZone>
-  <w:PunctuationKerning/>
-  <w:ValidateAgainstSchemas/>
-  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
-  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
-  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
-  <w:DoNotPromoteQF/>
-  <w:LidThemeOther>FR-BE</w:LidThemeOther>
-  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
-  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
-  <w:Compatibility>
-   <w:BreakWrappedTables/>
-   <w:SnapToGridInCell/>
-   <w:WrapTextWithPunct/>
-   <w:UseAsianBreakRules/>
-   <w:DontGrowAutofit/>
-   <w:SplitPgBreakAndParaMark/>
-   <w:EnableOpenTypeKerning/>
-   <w:DontFlipMirrorIndents/>
-   <w:OverrideTableStyleHps/>
-  </w:Compatibility>
-  <m:mathPr>
-   <m:mathFont m:val="Cambria Math"/>
-   <m:brkBin m:val="before"/>
-   <m:brkBinSub m:val="&#45;-"/>
-   <m:smallFrac m:val="off"/>
-   <m:dispDef/>
-   <m:lMargin m:val="0"/>
-   <m:rMargin m:val="0"/>
-   <m:defJc m:val="centerGroup"/>
-   <m:wrapIndent m:val="1440"/>
-   <m:intLim m:val="subSup"/>
-   <m:naryLim m:val="undOvr"/>
-  </m:mathPr></w:WordDocument>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
-  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
-  LatentStyleCount="267">
-  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
-  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
-  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
-  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
-  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
-  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
-  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
-  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
-  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
-  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
-  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Table Grid"/>
-  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
-  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 1"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
-  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
-  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
-  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
-  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 2"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 3"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 4"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 5"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
-  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
-  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light List Accent 6"/>
-  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
-  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
-  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
-  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
-  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
-  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
-  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
-  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
-   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
-  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
-  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
-  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
-  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
-  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
-   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
-  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
-  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
- </w:LatentStyles>
-</xml><![endif]-->
+<meta name=Generator content="Microsoft Word 14 (filtered)">
 <style>
 <!--
  /* Font Definitions */
  @font-face
 	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;
-	mso-font-charset:2;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;
-	mso-font-charset:2;
-	mso-generic-font-family:auto;
-	mso-font-pitch:variable;
-	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:Cambria;
-	panose-1:2 4 5 3 5 4 6 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:roman;
-	mso-font-pitch:variable;
-	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
 	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:-536870145 1073786111 1 0 415 0;}
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
 @font-face
 	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;
-	mso-font-charset:0;
-	mso-generic-font-family:swiss;
-	mso-font-pitch:variable;
-	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-parent:"";
-	margin-top:0cm;
+	{margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:10.0pt;
 	margin-left:0cm;
 	line-height:115%;
-	mso-pagination:widow-orphan;
 	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
+	font-family:"Calibri","sans-serif";}
 h1
-	{mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-link:"Titre 1 Car";
-	mso-style-next:Normal;
+	{mso-style-link:"Titre 1 Car";
 	margin-top:24.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
 	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
-	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
-	mso-outline-level:1;
 	font-size:14.0pt;
 	font-family:"Cambria","serif";
-	mso-ascii-font-family:Cambria;
-	mso-ascii-theme-font:major-latin;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:major-fareast;
-	mso-hansi-font-family:Cambria;
-	mso-hansi-theme-font:major-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:major-bidi;
-	color:#365F91;
-	mso-themecolor:accent1;
-	mso-themeshade:191;
-	mso-font-kerning:0pt;
-	mso-fareast-language:EN-US;}
+	color:#365F91;}
 h2
-	{mso-style-priority:9;
-	mso-style-qformat:yes;
-	mso-style-link:"Titre 2 Car";
-	mso-style-next:Normal;
+	{mso-style-link:"Titre 2 Car";
 	margin-top:10.0pt;
 	margin-right:0cm;
 	margin-bottom:0cm;
 	margin-left:0cm;
 	margin-bottom:.0001pt;
 	line-height:115%;
-	mso-pagination:widow-orphan lines-together;
 	page-break-after:avoid;
-	mso-outline-level:2;
 	font-size:13.0pt;
 	font-family:"Cambria","serif";
-	mso-ascii-font-family:Cambria;
-	mso-ascii-theme-font:major-latin;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:major-fareast;
-	mso-hansi-font-family:Cambria;
-	mso-hansi-theme-font:major-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:major-bidi;
-	color:#4F81BD;
-	mso-themecolor:accent1;
-	mso-fareast-language:EN-US;}
+	color:#4F81BD;}
 pre
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:"Préformaté HTML Car";
+	{mso-style-link:"Préformaté HTML Car";
 	margin:0cm;
 	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
 	font-size:10.0pt;
-	font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";}
+	font-family:"Courier New";}
 p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
-	{mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-link:"Texte de bulles Car";
+	{mso-style-link:"Texte de bulles Car";
 	margin:0cm;
 	margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
 	font-size:8.0pt;
-	font-family:"Tahoma","sans-serif";
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-fareast-language:EN-US;}
+	font-family:"Tahoma","sans-serif";}
 p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	margin-top:0cm;
+	{margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:10.0pt;
 	margin-left:36.0pt;
-	mso-add-space:auto;
 	line-height:115%;
-	mso-pagination:widow-orphan;
 	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
+	font-family:"Calibri","sans-serif";}
 p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0cm;
+	{margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:0cm;
 	margin-left:36.0pt;
 	margin-bottom:.0001pt;
-	mso-add-space:auto;
 	line-height:115%;
-	mso-pagination:widow-orphan;
 	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
+	font-family:"Calibri","sans-serif";}
 p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0cm;
+	{margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:0cm;
 	margin-left:36.0pt;
 	margin-bottom:.0001pt;
-	mso-add-space:auto;
 	line-height:115%;
-	mso-pagination:widow-orphan;
 	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
+	font-family:"Calibri","sans-serif";}
 p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{mso-style-priority:34;
-	mso-style-unhide:no;
-	mso-style-qformat:yes;
-	mso-style-type:export-only;
-	margin-top:0cm;
+	{margin-top:0cm;
 	margin-right:0cm;
 	margin-bottom:10.0pt;
 	margin-left:36.0pt;
-	mso-add-space:auto;
 	line-height:115%;
-	mso-pagination:widow-orphan;
 	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
+	font-family:"Calibri","sans-serif";}
 span.Titre1Car
 	{mso-style-name:"Titre 1 Car";
-	mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
 	mso-style-link:"Titre 1";
-	mso-ansi-font-size:14.0pt;
-	mso-bidi-font-size:14.0pt;
 	font-family:"Cambria","serif";
-	mso-ascii-font-family:Cambria;
-	mso-ascii-theme-font:major-latin;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:major-fareast;
-	mso-hansi-font-family:Cambria;
-	mso-hansi-theme-font:major-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:major-bidi;
 	color:#365F91;
-	mso-themecolor:accent1;
-	mso-themeshade:191;
 	font-weight:bold;}
 span.Titre2Car
 	{mso-style-name:"Titre 2 Car";
-	mso-style-priority:9;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
 	mso-style-link:"Titre 2";
-	mso-ansi-font-size:13.0pt;
-	mso-bidi-font-size:13.0pt;
 	font-family:"Cambria","serif";
-	mso-ascii-font-family:Cambria;
-	mso-ascii-theme-font:major-latin;
-	mso-fareast-font-family:"Times New Roman";
-	mso-fareast-theme-font:major-fareast;
-	mso-hansi-font-family:Cambria;
-	mso-hansi-theme-font:major-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:major-bidi;
 	color:#4F81BD;
-	mso-themecolor:accent1;
 	font-weight:bold;}
-span.TextedebullesCar
-	{mso-style-name:"Texte de bulles Car";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
-	mso-style-link:"Texte de bulles";
-	mso-ansi-font-size:8.0pt;
-	mso-bidi-font-size:8.0pt;
-	font-family:"Tahoma","sans-serif";
-	mso-ascii-font-family:Tahoma;
-	mso-hansi-font-family:Tahoma;
-	mso-bidi-font-family:Tahoma;}
 span.PrformatHTMLCar
 	{mso-style-name:"Préformaté HTML Car";
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-unhide:no;
-	mso-style-locked:yes;
 	mso-style-link:"Préformaté HTML";
-	mso-ansi-font-size:10.0pt;
-	mso-bidi-font-size:10.0pt;
-	font-family:"Courier New";
-	mso-ascii-font-family:"Courier New";
-	mso-fareast-font-family:"Times New Roman";
-	mso-hansi-font-family:"Courier New";
-	mso-bidi-font-family:"Courier New";
-	mso-fareast-language:FR-BE;}
+	font-family:"Courier New";}
+span.TextedebullesCar
+	{mso-style-name:"Texte de bulles Car";
+	mso-style-link:"Texte de bulles";
+	font-family:"Tahoma","sans-serif";}
 .MsoChpDefault
-	{mso-style-type:export-only;
-	mso-default-props:yes;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-fareast-font-family:Calibri;
-	mso-fareast-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-bidi-font-family:"Times New Roman";
-	mso-bidi-theme-font:minor-bidi;
-	mso-fareast-language:EN-US;}
-.MsoPapDefault
-	{mso-style-type:export-only;
-	margin-bottom:10.0pt;
-	line-height:115%;}
+	{font-size:10.0pt;
+	font-family:"Calibri","sans-serif";}
 @page WordSection1
 	{size:595.3pt 841.9pt;
-	margin:70.85pt 70.85pt 70.85pt 70.85pt;
-	mso-header-margin:35.4pt;
-	mso-footer-margin:35.4pt;
-	mso-paper-source:0;}
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
 div.WordSection1
 	{page:WordSection1;}
  /* List Definitions */
- @list l0
-	{mso-list-id:1421637467;
-	mso-list-type:hybrid;
-	mso-list-template-ids:1587043284 135004161 135004163 135004165 135004161 135004163 135004165 135004161 135004163 135004165;}
-@list l0:level1
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0B7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:38.25pt;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l0:level2
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:74.25pt;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l0:level3
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:110.25pt;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l0:level4
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0B7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:146.25pt;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l0:level5
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:182.25pt;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l0:level6
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:218.25pt;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-@list l0:level7
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0B7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:254.25pt;
-	text-indent:-18.0pt;
-	font-family:Symbol;}
-@list l0:level8
-	{mso-level-number-format:bullet;
-	mso-level-text:o;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:290.25pt;
-	text-indent:-18.0pt;
-	font-family:"Courier New";}
-@list l0:level9
-	{mso-level-number-format:bullet;
-	mso-level-text:\F0A7;
-	mso-level-tab-stop:none;
-	mso-level-number-position:left;
-	margin-left:326.25pt;
-	text-indent:-18.0pt;
-	font-family:Wingdings;}
-ol
+ ol
 	{margin-bottom:0cm;}
 ul
 	{margin-bottom:0cm;}
 -->
 </style>
-<!--[if gte mso 10]>
-<style>
- /* Style Definitions */
- table.MsoNormalTable
-	{mso-style-name:"Tableau Normal";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-noshow:yes;
-	mso-style-priority:99;
-	mso-style-parent:"";
-	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-para-margin-top:0cm;
-	mso-para-margin-right:0cm;
-	mso-para-margin-bottom:10.0pt;
-	mso-para-margin-left:0cm;
-	line-height:115%;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-fareast-language:EN-US;}
-table.MsoTableGrid
-	{mso-style-name:"Grille du tableau";
-	mso-tstyle-rowband-size:0;
-	mso-tstyle-colband-size:0;
-	mso-style-priority:59;
-	mso-style-unhide:no;
-	border:solid windowtext 1.0pt;
-	mso-border-alt:solid windowtext .5pt;
-	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-border-insideh:.5pt solid windowtext;
-	mso-border-insidev:.5pt solid windowtext;
-	mso-para-margin:0cm;
-	mso-para-margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	mso-fareast-language:EN-US;}
-table.MsoTableLightShading
-	{mso-style-name:"Ombrage clair";
-	mso-tstyle-rowband-size:1;
-	mso-tstyle-colband-size:1;
-	mso-style-priority:60;
-	mso-style-unhide:no;
-	border-top:solid black 1.0pt;
-	mso-border-top-themecolor:text1;
-	border-left:none;
-	border-bottom:solid black 1.0pt;
-	mso-border-bottom-themecolor:text1;
-	border-right:none;
-	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
-	mso-para-margin:0cm;
-	mso-para-margin-bottom:.0001pt;
-	mso-pagination:widow-orphan;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";
-	mso-ascii-font-family:Calibri;
-	mso-ascii-theme-font:minor-latin;
-	mso-hansi-font-family:Calibri;
-	mso-hansi-theme-font:minor-latin;
-	color:black;
-	mso-themecolor:text1;
-	mso-themeshade:191;
-	mso-fareast-language:EN-US;}
-table.MsoTableLightShadingFirstRow
-	{mso-style-name:"Ombrage clair";
-	mso-table-condition:first-row;
-	mso-style-priority:60;
-	mso-style-unhide:no;
-	mso-tstyle-border-top:1.0pt solid black;
-	mso-tstyle-border-top-themecolor:text1;
-	mso-tstyle-border-left:cell-none;
-	mso-tstyle-border-bottom:1.0pt solid black;
-	mso-tstyle-border-bottom-themecolor:text1;
-	mso-tstyle-border-right:cell-none;
-	mso-tstyle-border-insideh:cell-none;
-	mso-tstyle-border-insidev:cell-none;
-	mso-para-margin-top:0cm;
-	mso-para-margin-bottom:0cm;
-	mso-para-margin-bottom:.0001pt;
-	line-height:normal;
-	mso-ansi-font-weight:bold;
-	mso-bidi-font-weight:bold;}
-table.MsoTableLightShadingLastRow
-	{mso-style-name:"Ombrage clair";
-	mso-table-condition:last-row;
-	mso-style-priority:60;
-	mso-style-unhide:no;
-	mso-tstyle-border-top:1.0pt solid black;
-	mso-tstyle-border-top-themecolor:text1;
-	mso-tstyle-border-left:cell-none;
-	mso-tstyle-border-bottom:1.0pt solid black;
-	mso-tstyle-border-bottom-themecolor:text1;
-	mso-tstyle-border-right:cell-none;
-	mso-tstyle-border-insideh:cell-none;
-	mso-tstyle-border-insidev:cell-none;
-	mso-para-margin-top:0cm;
-	mso-para-margin-bottom:0cm;
-	mso-para-margin-bottom:.0001pt;
-	line-height:normal;
-	mso-ansi-font-weight:bold;
-	mso-bidi-font-weight:bold;}
-table.MsoTableLightShadingFirstCol
-	{mso-style-name:"Ombrage clair";
-	mso-table-condition:first-column;
-	mso-style-priority:60;
-	mso-style-unhide:no;
-	mso-ansi-font-weight:bold;
-	mso-bidi-font-weight:bold;}
-table.MsoTableLightShadingLastCol
-	{mso-style-name:"Ombrage clair";
-	mso-table-condition:last-column;
-	mso-style-priority:60;
-	mso-style-unhide:no;
-	mso-ansi-font-weight:bold;
-	mso-bidi-font-weight:bold;}
-table.MsoTableLightShadingOddColumn
-	{mso-style-name:"Ombrage clair";
-	mso-table-condition:odd-column;
-	mso-style-priority:60;
-	mso-style-unhide:no;
-	mso-tstyle-shading:silver;
-	mso-tstyle-shading-themecolor:text1;
-	mso-tstyle-shading-themetint:63;
-	mso-tstyle-border-left:cell-none;
-	mso-tstyle-border-right:cell-none;
-	mso-tstyle-border-insideh:cell-none;
-	mso-tstyle-border-insidev:cell-none;}
-table.MsoTableLightShadingOddRow
-	{mso-style-name:"Ombrage clair";
-	mso-table-condition:odd-row;
-	mso-style-priority:60;
-	mso-style-unhide:no;
-	mso-tstyle-shading:silver;
-	mso-tstyle-shading-themecolor:text1;
-	mso-tstyle-shading-themetint:63;
-	mso-tstyle-border-left:cell-none;
-	mso-tstyle-border-right:cell-none;
-	mso-tstyle-border-insideh:cell-none;
-	mso-tstyle-border-insidev:cell-none;}
-</style>
-<![endif]--><!--[if gte mso 9]><xml>
- <o:shapedefaults v:ext="edit" spidmax="1026"/>
-</xml><![endif]--><!--[if gte mso 9]><xml>
- <o:shapelayout v:ext="edit">
-  <o:idmap v:ext="edit" data="1"/>
- </o:shapelayout></xml><![endif]-->
+
 </head>
 
-<body lang=FR-BE style='tab-interval:35.4pt'>
+<body lang=FR-BE>
 
 <div class=WordSection1>
 
-<h1><span lang=EN-US style='mso-ansi-language:EN-US'>Project Practical Machine
-Learning <o:p></o:p></span></h1>
+<h1><span lang=EN-US>Project Practical Machine Learning </span></h1>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><span lang=EN-US style='mso-ansi-language:EN-US'>First descriptive
-analytics<o:p></o:p></span></h2>
+<h2><span lang=EN-US>First descriptive analytics</span></h2>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Before
-starting with the modeling, I did some basic descriptive analytics in order to
-understand my data.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Before starting with the modeling, I did
+some basic descriptive analytics in order to understand my data.</span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
- mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+ style='border-collapse:collapse;border:none'>
+ <tr>
   <td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Number of variables
-  in dataset<o:p></o:p></span></p>
-  </td>
-  <td width=205 valign=top style='width:153.55pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>160<o:p></o:p></span></p>
-  </td>
-  <td width=205 valign=top style='width:153.55pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
-  <td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Variable to predict <o:p></o:p></span></p>
+  normal'><span lang=EN-US>Number of variables in dataset</span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>160</span></p>
+  </td>
+  <td width=205 valign=top style='width:153.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=205 valign=top style='width:153.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>Variable to predict </span></p>
   </td>
   <td width=205 valign=top style='width:153.55pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Classe<o:p></o:p></span></p>
+  normal'><span lang=EN-US>Classe</span></p>
   </td>
   <td width=205 valign=top style='width:153.55pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Factor (5 levels)<o:p></o:p></span></p>
+  normal'><span lang=EN-US>Factor (5 levels)</span></p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The first
-thing I did was to remove the variables that have more that 50% of NA’s as
-value. This let me with only 60 variables in my dataset. On these 60 Variables,
-I did some basic plotting of the Classe variable versus all other variables,
-allowing me to see the distribution of the other variables towards the variable
-Classe.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>The first thing I did was to remove the
+variables that have more that 50% of NA’s as value. This let me with only 60
+variables in my dataset. On these 60 Variables, I did some basic plotting of
+the Classe variable versus all other variables, allowing me to see the
+distribution of the other variables towards the variable Classe.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Example : </span><span
-lang=EN-US style='mso-ansi-language:EN-US;mso-fareast-language:FR-BE;
-mso-no-proof:yes'>plot of Gyros_dumbell_x towards the variable Classe<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Example : </span><span lang=EN-US>plot of
+Gyros_dumbell_x towards the variable Classe</span></p>
 
-<p class=MsoNormal><span style='mso-fareast-language:FR-BE;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
- id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
- path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
- <v:stroke joinstyle="miter"/>
- <v:formulas>
-  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
-  <v:f eqn="sum @0 1 0"/>
-  <v:f eqn="sum 0 0 @1"/>
-  <v:f eqn="prod @2 1 2"/>
-  <v:f eqn="prod @3 21600 pixelWidth"/>
-  <v:f eqn="prod @3 21600 pixelHeight"/>
-  <v:f eqn="sum @0 0 1"/>
-  <v:f eqn="prod @6 1 2"/>
-  <v:f eqn="prod @7 21600 pixelWidth"/>
-  <v:f eqn="sum @8 21600 0"/>
-  <v:f eqn="prod @7 21600 pixelHeight"/>
-  <v:f eqn="sum @10 21600 0"/>
- </v:formulas>
- <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
- <o:lock v:ext="edit" aspectratio="t"/>
-</v:shapetype><v:shape id="Image_x0020_4" o:spid="_x0000_i1028" type="#_x0000_t75"
- style='width:453.75pt;height:226.5pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="Project%20Practical%20Machine%20Learning_fichiers/image001.png"
-  o:title=""/>
-</v:shape><![endif]--><![if !vml]><img width=605 height=302
-src="Project%20Practical%20Machine%20Learning_fichiers/image002.jpg" v:shapes="Image_x0020_4"><![endif]></span><span
-lang=EN-US style='mso-ansi-language:EN-US;mso-fareast-language:FR-BE;
-mso-no-proof:yes'><o:p></o:p></span></p>
+<p class=MsoNormal><img width=605 height=302 id="Image 4"
+src="Project%20Practical%20Machine%20Learning_fichiers/image001.jpg"></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US;mso-fareast-language:
-FR-BE;mso-no-proof:yes'>From this first analysis, I could visally spot some
-outliers in the data and hence I removed the records that were outliers, in
-order to reduce the noise, when I will have to train my model.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>From this first analysis, I could visally
+spot some outliers in the data and hence I removed the records that were
+outliers, in order to reduce the noise, when I will have to train my model.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US;mso-fareast-language:
-FR-BE;mso-no-proof:yes'>After removing the outliers from the data, then I
-plotted again the data, with boxplot for the variables that are continuous and
-with the histogram for the variables that are discreete.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>After removing the outliers from the data,
+then I plotted again the data, with boxplot for the variables that are
+continuous and with the histogram for the variables that are discreete.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US;mso-fareast-language:
-FR-BE;mso-no-proof:yes'>Example: Magnet_arm_X versus Classe<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Example: Magnet_arm_X versus Classe</span></p>
 
-<p class=MsoNormal><span style='mso-fareast-language:FR-BE;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Image_x0020_5" o:spid="_x0000_i1027" type="#_x0000_t75" style='width:453.75pt;
- height:264.75pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="Project%20Practical%20Machine%20Learning_fichiers/image003.png"
-  o:title="Plot_boxplotmagnet_arm_x"/>
-</v:shape><![endif]--><![if !vml]><img width=605 height=353
-src="Project%20Practical%20Machine%20Learning_fichiers/image004.jpg" v:shapes="Image_x0020_5"><![endif]></span><span
-lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+<p class=MsoNormal><img width=605 height=353 id="Image 5"
+src="Project%20Practical%20Machine%20Learning_fichiers/image002.jpg"
+alt="Plot_boxplotmagnet_arm_x"></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>This allows
-me to see further the distribution of the variables versus the Classe.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>This allows me to see further the
+distribution of the variables versus the Classe.</span></p>
 
-<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Basic clustering<o:p></o:p></span></h2>
+<h2><span lang=EN-US>Basic clustering</span></h2>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>After this
-first descriptive analysis, I wanted to check if basic clustering methods could
-be used to cluster the data. So I tried different method, on a small random
-sample of the data (1000). This is just to check rapidly if this direction
-could be followed deeper.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>After this first descriptive analysis, I
+wanted to check if basic clustering methods could be used to cluster the data.
+So I tried different method, on a small random sample of the data (1000). This
+is just to check rapidly if this direction could be followed deeper.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>First I
-tried hierarchical clustering based on the distances of the records. <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>First I tried hierarchical clustering based
+on the distances of the records. </span></p>
 
-<p class=MsoNormal><span style='mso-fareast-language:FR-BE;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Image_x0020_6" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:453.75pt;
- height:226.5pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="Project%20Practical%20Machine%20Learning_fichiers/image005.png"
-  o:title="heatmap"/>
-</v:shape><![endif]--><![if !vml]><img width=605 height=302
-src="Project%20Practical%20Machine%20Learning_fichiers/image006.jpg" v:shapes="Image_x0020_6"><![endif]></span><span
-lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+<p class=MsoNormal><img width=605 height=302 id="Image 6"
+src="Project%20Practical%20Machine%20Learning_fichiers/image003.jpg"
+alt=heatmap></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>From the
-hierarchical clustering, there does not seem to be a lot of clear clusters so
-there should be no further analysis. <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>From the hierarchical clustering, there
+does not seem to be a lot of clear clusters so there should be no further
+analysis. </span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Then I used
-kmeans clustering to check if I could cluster with base on distances but again,
-the results were not really good. <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Then I used kmeans clustering to check if I
+could cluster with base on distances but again, the results were not really
+good. </span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Lastly, I
-used the PCA to check if reduction of dimensionality could be used to help
-clustering, removing the correlation between the predictors. The results seem
-to be much better. Indeed, on the following graph, we see that the rows can be
-approximately clustered in 5 clusters, based on the plot of the row mean on the
-first vector of the PCA. This is a good track to be followed when creating
-features for modeling.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Lastly, I used the PCA to check if
+reduction of dimensionality could be used to help clustering, removing the
+correlation between the predictors. The results seem to be much better. Indeed,
+on the following graph, we see that the rows can be approximately clustered in
+5 clusters, based on the plot of the row mean on the first vector of the PCA.
+This is a good track to be followed when creating features for modeling.</span></p>
 
-<p class=MsoNormal><span style='mso-fareast-language:FR-BE;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
- id="Image_x0020_7" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:453.75pt;
- height:226.5pt;visibility:visible;mso-wrap-style:square'>
- <v:imagedata src="Project%20Practical%20Machine%20Learning_fichiers/image007.png"
-  o:title="PCA_vectors"/>
-</v:shape><![endif]--><![if !vml]><img width=605 height=302
-src="Project%20Practical%20Machine%20Learning_fichiers/image008.jpg" v:shapes="Image_x0020_7"><![endif]></span><span
-lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+<p class=MsoNormal><img width=605 height=302 id="Image 7"
+src="Project%20Practical%20Machine%20Learning_fichiers/image004.jpg"
+alt="PCA_vectors"></p>
 
-<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Classification modeling<o:p></o:p></span></h2>
+<h2><span lang=EN-US>Classification modeling</span></h2>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>After this
-attempt to apply basic clustering methods, we see the need for a more complex method.
-Our choice goes to random forest, with of course a lot of attention to cross
-validation in order to avoid overfitting. <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>After this attempt to apply basic
+clustering methods, we see the need for a more complex method. Our choice goes
+to random forest, with of course a lot of attention to cross validation in
+order to avoid overfitting. </span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>So we randomly
-divided the dataset into training and validation, with 80% of the data in
-training and 20% of the data in the validation dataset. We chose to do so
-because we spitted further the training set into 10 folds in order to perform
-cross validation. Random forest is very robust and does not require a lot of
-preprocessing, like scaling or dimensionality reduction.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>So we randomly divided the dataset into
+training and validation, with 80% of the data in training and 20% of the data
+in the validation dataset. We chose to do so because we spitted further the
+training set into 10 folds in order to perform cross validation. Random forest
+is very robust and does not require a lot of preprocessing, like scaling or
+dimensionality reduction.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Indeed, here
-are the steps performed: <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Indeed, here are the steps performed: </span></p>
 
-<p class=MsoListParagraphCxSpFirst style='margin-left:38.25pt;mso-add-space:
-auto;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
-lang=EN-US style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Training
-of the model on the full training set<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpFirst style='margin-left:38.25pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Training of the model on the full training set</span></p>
 
-<p class=MsoListParagraphCxSpMiddle style='margin-left:38.25pt;mso-add-space:
-auto;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
-lang=EN-US style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>Prediction
-on the validation set <o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='margin-left:38.25pt;text-indent:
+-18.0pt'><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Prediction on the validation set </span></p>
 
-<p class=MsoListParagraphCxSpLast style='margin-left:38.25pt;mso-add-space:
-auto;text-indent:-18.0pt;mso-list:l0 level1 lfo1'><![if !supportLists]><span
-lang=EN-US style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol;mso-ansi-language:EN-US'><span style='mso-list:Ignore'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span></span><![endif]><span lang=EN-US style='mso-ansi-language:EN-US'>If
-the accuracy on the validation set is good enough, checking of the stability of
-the model, using 10 folds cross validation on the training set. <o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpLast style='margin-left:38.25pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>If the accuracy on the validation set is good
+enough, checking of the stability of the model, using 10 folds cross validation
+on the training set. </span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>First model
-chosen is random forest, with a Mtry = 10 and nodesize = 20. <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>First model chosen is random forest, with a
+Mtry = 10 and nodesize = 20. </span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The results
-are the following:<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>The results are the following:</span></p>
 
 <table class=MsoTableLightShading border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-top-alt:solid black 1.0pt;
- mso-border-top-themecolor:text1;mso-border-bottom-alt:solid black 1.0pt;
- mso-border-bottom-themecolor:text1;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+ style='border-collapse:collapse;border:none'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:5'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Set on which prediction
-  used<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Set on which prediction used</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:1'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Accuracy<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Accuracy</span></b></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:0'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Validation <o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Validation </span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>0.9987251<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.9987251</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>1 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>1 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.998726114649682<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.998726114649682</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>2 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>2 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.999363867684478<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.999363867684478</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:3'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>3 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>3 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.999363057324841<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.999363057324841</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:4'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>4 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>4 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.998086734693878<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.998086734693878</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:5'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>5 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>5 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.998087954110899<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.998087954110899</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:6'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>6 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>6 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.998089171974522<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.998089171974522</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:7'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>7 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>7 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>1<o:p></o:p></span></p>
+  normal'><span style='color:black'>1</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:8'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>8 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>8 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.997452229299363<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.997452229299363</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:9'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>9 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>9 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.997450605481198<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.997450605481198</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:10'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>10 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>10 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.998087954110899<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.998087954110899</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Mean on the 10 folds<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Mean on the 10 folds</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='color:black;mso-themecolor:text1;mso-themeshade:
-  191;mso-ansi-language:EN-US'>0.998470768932976<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.998470768932976</span></p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Fig: first
-model, random forest, results on the validation set and 10 folds cross
-validation<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Fig: first model, random forest, results on
+the validation set and 10 folds cross validation</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The results
-are already really good because the average accuracy of the cross validation is
-really similar to the one of the validation set. However, I wanted to check if
-I could reduce the number of variables, in order to bring stability to the
-model. Hence I checked the variable importance on the training set and removed
-2 variables from the training set: “new_window”, ”raw_timestamp_part_2”.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>The results are already really good because
+the average accuracy of the cross validation is really similar to the one of
+the validation set. However, I wanted to check if I could reduce the number of
+variables, in order to bring stability to the model. Hence I checked the
+variable importance on the training set and removed 2 variables from the
+training set: “new_window”, ”raw_timestamp_part_2”.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>After
-removing those two variables, I used again the same algorithm with the same
-parameters. Here are the results: <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>After removing those two variables, I used
+again the same algorithm with the same parameters. Here are the results: </span></p>
 
 <table class=MsoTableLightShading border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-top-alt:solid black 1.0pt;
- mso-border-top-themecolor:text1;mso-border-bottom-alt:solid black 1.0pt;
- mso-border-bottom-themecolor:text1;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+ style='border-collapse:collapse;border:none'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:5'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Set on which prediction
-  used<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Set on which prediction used</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:1'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Accuracy<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Accuracy</span></b></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:0'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Validation <o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Validation </span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>0.9984702<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.9984702</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>1 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>1 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.994904458598726<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.994904458598726</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>2 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>2 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.998725302740599<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.998725302740599</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:3'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>3 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>3 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'><span
-  style='mso-spacerun:yes'> </span>0.998090388287715<o:p></o:p></span></p>
+  normal'><span style='color:black'> 0.998090388287715</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:4'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>4 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>4 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.999363057324841<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.999363057324841</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:5'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>5 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>5 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.998089171974522<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.998089171974522</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:6'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>6 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>6 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.998726114649682<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.998726114649682</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:7'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>7 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>7 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.997450605481198<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.997450605481198</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:8'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>8 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>8 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>0.989815404201146<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.989815404201146</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:9'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>9 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>9 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='color:black;mso-themecolor:text1;mso-themeshade:
-  191;mso-ansi-language:EN-US'>0.998724489795918<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.998724489795918</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:10'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>10 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>10 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>0.998089171974522<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.998089171974522</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Mean on the 10 folds<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Mean on the 10 folds</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='color:black;mso-themecolor:text1;mso-themeshade:
-  191;mso-ansi-language:EN-US'>0.998152622359029<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.998152622359029</span></p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Fig: Second
-model, random forest, results on the validation set <span
-style='mso-spacerun:yes'> </span>and 10 folds cross validation<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Fig: Second model, random forest, results
+on the validation set  and 10 folds cross validation</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The results
-from the second model are very close to the results from the first model,
-meaning that the 2 variables that have been removed did not have a crucial role
-in predicting the classe but rather were noise. Hence it is good to have
-removed them from the predictor set.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>The results from the second model are very
+close to the results from the first model, meaning that the 2 variables that
+have been removed did not have a crucial role in predicting the classe but
+rather were noise. Hence it is good to have removed them from the predictor
+set.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Now we want
-to see if we can further remove the dimension of the variables. Since there was
-a good direction from PCA, we decide to go for PCA. From the PCA, we see that
-with the first component, we can already explain 100% of the variance. The
-second and third components slightly have some importance but the rest of the
-component is not adding anything. Hence we decide to take the 3 first
-components and to use again the same model with the same parameters.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Now we want to see if we can further remove
+the dimension of the variables. Since there was a good direction from PCA, we decide
+to go for PCA. From the PCA, we see that with the first component, we can
+already explain 100% of the variance. The second and third components slightly
+have some importance but the rest of the component is not adding anything.
+Hence we decide to take the 3 first components and to use again the same model
+with the same parameters.</span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
- mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:27.35pt'>
+ style='border-collapse:collapse;border:none'>
+ <tr style='height:27.35pt'>
   <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
+  padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Importance of
-  components:<span style='mso-spacerun:yes'>        </span><span
-  style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  normal'><span lang=EN-US>Importance of components:          </span></p>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'><span
-  style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  normal'><span lang=EN-US>  </span></p>
   </td>
   <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>PC1<span
-  style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  normal'><span lang=EN-US>PC1  </span></p>
   </td>
   <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>PC2<o:p></o:p></span></p>
+  normal'><span lang=EN-US>PC2</span></p>
   </td>
   <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>PC3<o:p></o:p></span></p>
+  normal'><span lang=EN-US>PC3</span></p>
   </td>
   <td width=102 valign=top style='width:76.8pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>PC4<o:p></o:p></span></p>
+  normal'><span lang=EN-US>PC4</span></p>
   </td>
   <td width=102 valign=top style='width:76.8pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:27.35pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>PC5<o:p></o:p></span></p>
+  normal'><span lang=EN-US>PC5</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1'>
+ <tr>
   <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>Standard deviation   </span></p>
+  </td>
+  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Standard
-  deviation<span style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+  normal'><span lang=EN-US>205091</span></p>
   </td>
   <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>205091<o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'><span
-  style='mso-spacerun:yes'>  </span>601.23628<o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>526.51300<o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>440.8<o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>358.7<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:2'>
-  <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Proportion of
-  Variance<span style='mso-spacerun:yes'>      </span><o:p></o:p></span></p>
+  normal'><span lang=EN-US>  601.23628</span></p>
   </td>
   <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>1<o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>0.00001<span
-  style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>0.00001<span
-  style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>0.00<o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>0.00<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
-  <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>Cumulative
-  Proportion<span style='mso-spacerun:yes'>       </span><o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>1<o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>0.99998<span
-  style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
-  </td>
-  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
-  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>0.99998<span
-  style='mso-spacerun:yes'>   </span><o:p></o:p></span></p>
+  normal'><span lang=EN-US>526.51300</span></p>
   </td>
   <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>1.0<o:p></o:p></span></p>
+  normal'><span lang=EN-US>440.8</span></p>
   </td>
   <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>1.0<o:p></o:p></span></p>
+  normal'><span lang=EN-US>358.7</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>Proportion of Variance      </span></p>
+  </td>
+  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>0.00001   </span></p>
+  </td>
+  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>0.00001   </span></p>
+  </td>
+  <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>0.00</span></p>
+  </td>
+  <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>0.00</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=102 valign=top style='width:76.75pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>Cumulative Proportion       </span></p>
+  </td>
+  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>0.99998   </span></p>
+  </td>
+  <td width=102 valign=top style='width:76.75pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>0.99998   </span></p>
+  </td>
+  <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>1.0</span></p>
+  </td>
+  <td width=102 valign=top style='width:76.8pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>1.0</span></p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Fig: Result
-from the PCA preprocessing<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Fig: Result from the PCA preprocessing</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Results
-from random forest applied to PCA:<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Results from random forest applied to PCA:</span></p>
 
 <table class=MsoTableLightShading border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-top-alt:solid black 1.0pt;
- mso-border-top-themecolor:text1;mso-border-bottom-alt:solid black 1.0pt;
- mso-border-bottom-themecolor:text1;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+ style='border-collapse:collapse;border:none'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:5'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Set on which prediction
-  used<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Set on which prediction used</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:1'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Accuracy<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Accuracy</span></b></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:0'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Validation <o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Validation </span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>0.9969403<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.9969403</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:1'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>1 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>1 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.994904458598726<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.994904458598726</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:2'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>2 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>2 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.993002544529262<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.993002544529262</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:3'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>3 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>3 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.994904458598726<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.994904458598726</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:4'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>4 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>4 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.994897959183674<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.994897959183674</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:5'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>5 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>5 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.993626513702995<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.993626513702995</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:6'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>6 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>6 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.996178343949045<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.996178343949045</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:7'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>7 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>7 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.995544239338001<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.995544239338001</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:8'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>8 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>8 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.991082802547771<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.991082802547771</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:9'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>9 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>9 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span style='color:black;mso-themecolor:text1;mso-themeshade:191'>0.992351816443595<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.992351816443595</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:10'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>10 fold<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>10 fold</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;background:silver;
-  mso-background-themecolor:text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span style='color:black;mso-themecolor:text1;
-  mso-themeshade:191'>0.994263862332696<o:p></o:p></span></p>
+  normal'><span style='color:black'>0.994263862332696</span></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:11;mso-yfti-lastrow:yes'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:4'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Mean on the 10 folds<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Mean on the 10 folds</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='color:black;mso-themecolor:text1;mso-themeshade:
-  191;mso-ansi-language:EN-US'>0.994075699922449<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.994075699922449</span></p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Fig: Third
-model, random forest, results on the validation set and 10 folds cross
-validation<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Fig: Third model, random forest, results on
+the validation set and 10 folds cross validation</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>This model
-is once again really coherent and really good. <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>This model is once again really coherent
+and really good. </span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Now we want
-to try SVM just for the sake of comparing it with random forest.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Now we want to try SVM just for the sake of
+comparing it with random forest.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The results
-are:<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>The results are:</span></p>
 
 <table class=MsoTableLightShading border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-top-alt:solid black 1.0pt;
- mso-border-top-themecolor:text1;mso-border-bottom-alt:solid black 1.0pt;
- mso-border-bottom-themecolor:text1;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+ style='border-collapse:collapse;border:none'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:5'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Set on which prediction
-  used<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Set on which prediction used</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:1'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Accuracy<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Accuracy</span></b></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;background:silver;mso-background-themecolor:
-  text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Validation <o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Validation </span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;background:silver;mso-background-themecolor:
-  text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>0.9194289<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.9194289</span></p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Fig: Forth
-model, Support vector machine, results on the validation set<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Fig: Forth model, Support vector machine,
+results on the validation set</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Since the
-result on the validation set is less good than for previous models, we do not
-bother cross validating.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Since the result on the validation set is
+less good than for previous models, we do not bother cross validating.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Last model,
-we check if using SVM on the PCA gives better results.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Last model, we check if using SVM on the
+PCA gives better results.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The results
-are:<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>The results are:</span></p>
 
 <table class=MsoTableLightShading border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-top-alt:solid black 1.0pt;
- mso-border-top-themecolor:text1;mso-border-bottom-alt:solid black 1.0pt;
- mso-border-bottom-themecolor:text1;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:-1;mso-yfti-firstrow:yes'>
+ style='border-collapse:collapse;border:none'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:5'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Set on which prediction
-  used<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Set on which prediction used</span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border-top:solid black 1.0pt;
-  mso-border-top-themecolor:text1;border-left:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;border-right:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  border-left:none;border-bottom:solid black 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:1'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Accuracy<o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Accuracy</span></b></p>
   </td>
  </tr>
- <tr style='mso-yfti-irow:0;mso-yfti-lastrow:yes'>
+ <tr>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;background:silver;mso-background-themecolor:
-  text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:68'><b><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>Validation <o:p></o:p></span></b></p>
+  normal'><b><span lang=EN-US style='color:black'>Validation </span></b></p>
   </td>
   <td width=307 valign=top style='width:230.3pt;border:none;border-bottom:solid black 1.0pt;
-  mso-border-bottom-themecolor:text1;background:silver;mso-background-themecolor:
-  text1;mso-background-themetint:63;padding:0cm 5.4pt 0cm 5.4pt'>
+  background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal;mso-yfti-cnfc:64'><span lang=EN-US style='color:black;mso-themecolor:
-  text1;mso-themeshade:191;mso-ansi-language:EN-US'>0.6126976<o:p></o:p></span></p>
+  normal'><span lang=EN-US style='color:black'>0.6126976</span></p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Fig: Forth
-model, Support vector machine, results on the validation set<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Fig: Forth model, Support vector machine,
+results on the validation set</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The results
-are absolutely not good. <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>The results are absolutely not good. </span></p>
 
-<h2><span lang=EN-US style='mso-ansi-language:EN-US'>Conclusion<o:p></o:p></span></h2>
+<h2><span lang=EN-US>Conclusion</span></h2>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>From the
-previous analysis, we see that random forest is a really good prediction
-algorithm for our problem. The overfitting is under control since we checked
-the cross validation samples and the results on the validation set. We also see
-that PCA reduces really the dimensionality of the problem, and random forest
-still performs very well, applied to PCA. The big advantage of using PCA and
-then random forest is the stabilization of the algorithm. Indeed, the less
-variable you use to predict, the less variation could come from another
-different set. Nevertheless, the standard deviation of the 3 first components
-of PCA being high, there is a risk of volatility introduced by the PCA. We then
-prefer to only use random forest alone and keep the second model as our best
-model. <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>From the previous analysis, we see that
+random forest is a really good prediction algorithm for our problem. The
+overfitting is under control since we checked the cross validation samples and
+the results on the validation set. We also see that PCA reduces really the
+dimensionality of the problem, and random forest still performs very well,
+applied to PCA. The big advantage of using PCA and then random forest is the
+stabilization of the algorithm. Indeed, the less variable you use to predict,
+the less variation could come from another different set. Nevertheless, the
+standard deviation of the 3 first components of PCA being high, there is a risk
+of volatility introduced by the PCA. We then prefer to only use random forest
+alone and keep the second model as our best model. </span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>A lot of
-other things could have been tried, like scaling with SVM, adaboost and other
-algorithm but since random forest is performing quite well and the time for
-this project being limited, we will stop the analysis here.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>A lot of other things could have been
+tried, like scaling with SVM, adaboost and other algorithm but since random
+forest is performing quite well and the time for this project being limited, we
+will stop the analysis here.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>The results
-on the new test set are: <o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>The results on the new test set are: </span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
- mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
- <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+ style='border-collapse:collapse;border:none'>
+ <tr>
   <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>1<o:p></o:p></span></p>
-  </td>
-  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>2<o:p></o:p></span></p>
-  </td>
-  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>3<o:p></o:p></span></p>
-  </td>
-  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>4<o:p></o:p></span></p>
-  </td>
-  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>5<o:p></o:p></span></p>
-  </td>
-  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>6<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>7<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>8<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>9<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>10<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>11<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>12<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>13<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>14<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>15<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>16<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>17<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>18<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>19<o:p></o:p></span></p>
-  </td>
-  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
-  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
-  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>20<o:p></o:p></span></p>
-  </td>
- </tr>
- <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
-  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
-  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>B<o:p></o:p></span></p>
+  normal'><span lang=EN-US>1</span></p>
+  </td>
+  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>2</span></p>
+  </td>
+  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>3</span></p>
+  </td>
+  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>4</span></p>
+  </td>
+  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>5</span></p>
+  </td>
+  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>6</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>7</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>8</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>9</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>10</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>11</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>12</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>13</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>14</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>15</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>16</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>17</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>18</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>19</span></p>
+  </td>
+  <td width=29 valign=top style='width:22.1pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>20</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=30 valign=top style='width:22.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal'><span lang=EN-US>B</span></p>
   </td>
   <td width=30 valign=top style='width:22.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A<o:p></o:p></span></p>
+  normal'><span lang=EN-US>A</span></p>
   </td>
   <td width=30 valign=top style='width:22.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>B<o:p></o:p></span></p>
+  normal'><span lang=EN-US>B</span></p>
   </td>
   <td width=30 valign=top style='width:22.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A<o:p></o:p></span></p>
+  normal'><span lang=EN-US>A</span></p>
   </td>
   <td width=30 valign=top style='width:22.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A<o:p></o:p></span></p>
+  normal'><span lang=EN-US>A</span></p>
   </td>
   <td width=30 valign=top style='width:22.15pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>E<o:p></o:p></span></p>
+  normal'><span lang=EN-US>E</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>D<o:p></o:p></span></p>
+  normal'><span lang=EN-US>D</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>B<o:p></o:p></span></p>
+  normal'><span lang=EN-US>B</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A<o:p></o:p></span></p>
+  normal'><span lang=EN-US>A</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A<o:p></o:p></span></p>
+  normal'><span lang=EN-US>A</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>B<o:p></o:p></span></p>
+  normal'><span lang=EN-US>B</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>C<o:p></o:p></span></p>
+  normal'><span lang=EN-US>C</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>B<o:p></o:p></span></p>
+  normal'><span lang=EN-US>B</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A<o:p></o:p></span></p>
+  normal'><span lang=EN-US>A</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>E<o:p></o:p></span></p>
+  normal'><span lang=EN-US>E</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>E<o:p></o:p></span></p>
+  normal'><span lang=EN-US>E</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>A<o:p></o:p></span></p>
+  normal'><span lang=EN-US>A</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>B<o:p></o:p></span></p>
+  normal'><span lang=EN-US>B</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>B<o:p></o:p></span></p>
+  normal'><span lang=EN-US>B</span></p>
   </td>
   <td width=29 valign=top style='width:22.1pt;border-top:none;border-left:none;
   border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
-  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  padding:0cm 5.4pt 0cm 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'><span lang=EN-US style='mso-ansi-language:EN-US'>B<o:p></o:p></span></p>
+  normal'><span lang=EN-US>B</span></p>
   </td>
  </tr>
 </table>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'>Dear
-reader, thank you for the time you took to read this report.<o:p></o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>Dear reader, thank you for the time you
+took to read this report.</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 </div>
 
